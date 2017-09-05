@@ -1,0 +1,54 @@
+<apex:page standardController="Case" extensions="IBMWatsonImageRecognization" showHeader="false"  standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Image Recognization with Watson </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <apex:slds />
+        </head>
+        <body>
+            
+            <div class="slds-scope">
+                <div class="demo-only" style="padding: 0.5rem; background: rgb(51, 135, 133);">
+                    <div class="slds-text-color_inverse-weak slds-text-heading_small slds-text-align_center"> Image Recognization with Watson.</div>
+                </div>
+                
+            </div>
+            
+            
+        </body>
+    </html>
+    <div class="slds-scope">
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps" style="padding: 0.5rem; color: rgb(51, 135, 133);">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Classification"><b>Classification</b></div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="prediction %"><b>prediction %</b></div>
+                    </th>
+                </tr> </thead>
+            <tbody>
+                <apex:repeat value="{!fetchClassifications}" var="cls">
+                    
+                    <tr>
+                        <th scope="row" data-label="Classification">
+                            <div class="slds-truncate" > {!cls.classificaions}</div>
+                        </th>
+                        <td data-label="prediction %">
+                            <div class="slds-truncate">
+                                {!cls.percentage}%
+                            </div>
+                        </td>
+                        
+                        
+                    </tr>
+                    
+                </apex:repeat>
+            </tbody>
+        </table>
+        
+    </div>
+</apex:page>

@@ -1,0 +1,17 @@
+{
+    "projectName": "Watson-Image-Recognition",
+    "username": "rajamohanvakati@forescout.com",
+    "id": "43b7ded0-91f8-11e7-93e3-691104653536",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://trailte-dev-ed.my.salesforce.com",
+    "workspace": "C:\\Users\\rvakati\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "StaticResource"
+    ]
+}
